@@ -1,21 +1,19 @@
-package cn.johnyu.springjpahibernatexml.dao;
+package cn.johnyu.springjpahibernateconfig.dao;
 
-import cn.johnyu.springjpahibernatexml.pojo.Book;
+import cn.johnyu.springjpahibernateconfig.pojo.Book;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
 import javax.persistence.PersistenceUnit;
 
-
+@Repository
 public class BookDaoImpl implements BookDao {
     @PersistenceContext
     EntityManager entityManager;
     @Override
     @Transactional  public void addBook(Book book) {
-        System.out.println(entityManager.getClass().getName());
         entityManager.persist(book);
     }
 }

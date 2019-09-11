@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>spring-jpa-hibernate-xml</module>
+        <module>spring-jpa-hibernate-config</module>
     </modules>
 
     <properties>

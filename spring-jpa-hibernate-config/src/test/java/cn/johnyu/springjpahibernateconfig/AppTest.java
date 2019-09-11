@@ -1,7 +1,7 @@
-package cn.johnyu.springjpahibernatexml;
+package cn.johnyu.springjpahibernateconfig;
 
-import cn.johnyu.springjpahibernatexml.dao.BookDao;
-import cn.johnyu.springjpahibernatexml.pojo.Book;
+import cn.johnyu.springjpahibernateconfig.dao.BookDao;
+import cn.johnyu.springjpahibernateconfig.pojo.Book;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import javax.sql.DataSource;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(locations = {"classpath:applicationContext.xml"})
+@ContextConfiguration(classes = {AppConf.class})
 public class AppTest {
     @Autowired
     DataSource dataSource;
@@ -23,7 +23,6 @@ public class AppTest {
     AbstractEntityManagerFactoryBean managerFactoryBean;
     @Autowired
     BookDao bookDao;
-
 
     @Test
     public void testDataSource(){
@@ -42,7 +41,7 @@ public class AppTest {
     @Test
     public void testBookDao(){
         Book book=new Book();
-        book.setBookName("JavaScript权威指南第6版.");
+        book.setBookName("JavaScript权威指南第6版！");
         book.setPrice(139.00);
         bookDao.addBook(book);
     }
