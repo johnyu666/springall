@@ -12,6 +12,7 @@
         <module>spring-jpa-hibernate-xml</module>
         <module>spring-jpa-hibernate-config</module>
         <module>spring-cache</module>
+        <module>securiety</module>
     </modules>
 
     <properties>

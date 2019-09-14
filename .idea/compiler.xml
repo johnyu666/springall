@@ -7,9 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springcache" />
+        <module name="securiety" />
         <module name="spring-jpa-hibernate-config" />
         <module name="springjpahibernatexml" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="web" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
